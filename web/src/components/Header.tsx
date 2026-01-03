@@ -50,8 +50,8 @@ export function Header() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                    ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg"
-                    : "bg-transparent"
+                ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg"
+                : "bg-transparent"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,9 +63,9 @@ export function Header() {
                         </div>
                         <div className="hidden sm:block">
                             <span className="font-bold text-xl text-gray-900 dark:text-white">
-                                Gabon
+                                ANTIA
                             </span>
-                            <span className="font-bold text-xl text-green-600">News</span>
+                            <span className="font-bold text-xl text-green-600">.GA</span>
                         </div>
                     </Link>
 
@@ -76,8 +76,8 @@ export function Header() {
                                 key={key}
                                 href={`/categorie/${key}`}
                                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${pathname === `/categorie/${key}`
-                                        ? "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300"
-                                        : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                    ? "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300"
+                                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                                     }`}
                             >
                                 {label}
@@ -131,8 +131,8 @@ export function Header() {
                                 key={key}
                                 href={`/categorie/${key}`}
                                 className={`block px-4 py-3 rounded-lg font-medium transition-colors ${pathname === `/categorie/${key}`
-                                        ? "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300"
-                                        : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                    ? "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300"
+                                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                                     }`}
                                 onClick={() => setIsMenuOpen(false)}
                             >

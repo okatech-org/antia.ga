@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "GabonNews - Agrégateur d'Actualités Gabonaises",
+  title: "ANTIA.GA - Actualités Gabonaises",
   description:
     "Toutes les actualités du Gabon réunies et réécrites par IA pour une lecture claire et objective. Politique, économie, société, sport, culture.",
   keywords: [
@@ -21,13 +21,15 @@ export const metadata: Metadata = {
     "Afrique",
     "politique",
     "économie",
+    "ANTIA",
   ],
-  authors: [{ name: "GabonNews" }],
+  authors: [{ name: "ANTIA.GA" }],
   openGraph: {
-    title: "GabonNews - Agrégateur d'Actualités Gabonaises",
+    title: "ANTIA.GA - Actualités Gabonaises",
     description: "Toutes les actualités du Gabon réunies et réécrites par IA",
     type: "website",
     locale: "fr_FR",
+    siteName: "ANTIA.GA",
   },
   manifest: "/manifest.json",
   icons: {
@@ -66,11 +68,11 @@ export default function RootLayout({
               <div className="flex items-center gap-2">
                 <span className="text-2xl">🇬🇦</span>
                 <span className="font-bold text-lg">
-                  Gabon<span className="text-green-600">News</span>
+                  ANTIA<span className="text-green-600">.GA</span>
                 </span>
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                Agrégateur d&apos;actualités gabonaises alimenté par IA.
+                Agrégateur d&apos;actualités gabonaises propulsé par l&apos;IA.
                 <br />
                 Les articles sont réécrits à partir de sources publiques.
               </p>

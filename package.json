@@ -1,7 +1,7 @@
 {
-  "name": "gabon-news-hub",
+  "name": "antia.ga",
   "version": "1.0.0",
-  "description": "Agrégateur de presse gabonaise avec IA Gemini",
+  "description": "ANTIA.GA - Agrégateur de presse gabonaise propulsé par l'IA",
   "private": true,
   "scripts": {
     "dev:functions": "cd functions && npm run serve",
@@ -14,7 +14,13 @@
     "deploy:hosting": "firebase deploy --only hosting",
     "emulators": "firebase emulators:start --only functions,firestore,hosting"
   },
-  "keywords": ["gabon", "news", "aggregator", "gemini", "firebase"],
+  "keywords": [
+    "gabon",
+    "news",
+    "aggregator",
+    "gemini",
+    "firebase"
+  ],
   "author": "",
   "license": "ISC"
 }
