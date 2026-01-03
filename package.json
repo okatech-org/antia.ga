@@ -1,0 +1,20 @@
+{
+  "name": "gabon-news-hub",
+  "version": "1.0.0",
+  "description": "Agrégateur de presse gabonaise avec IA Gemini",
+  "private": true,
+  "scripts": {
+    "dev:functions": "cd functions && npm run serve",
+    "dev:web": "cd web && npm run dev",
+    "build": "npm run build:functions && npm run build:web",
+    "build:functions": "cd functions && npm run build",
+    "build:web": "cd web && npm run build",
+    "deploy": "firebase deploy",
+    "deploy:functions": "firebase deploy --only functions",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "emulators": "firebase emulators:start --only functions,firestore,hosting"
+  },
+  "keywords": ["gabon", "news", "aggregator", "gemini", "firebase"],
+  "author": "",
+  "license": "ISC"
+}

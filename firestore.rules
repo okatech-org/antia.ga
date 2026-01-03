@@ -1,0 +1,58 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ============================================
+    // SOURCES - Configuration des sources de scraping
+    // ============================================
+    match /sources/{sourceId} {
+      // Lecture publique pour afficher les sources
+      allow read: if true;
+      // Écriture réservée aux Cloud Functions (via service account)
+      allow write: if false;
+    }
+    
+    // ============================================
+    // RAW ARTICLES - Articles bruts non traités
+    // ============================================
+    match /raw-articles/{articleId} {
+      // Accès réservé aux Cloud Functions uniquement
+      allow read, write: if false;
+    }
+    
+    // ============================================
+    // ARTICLES - Articles traités et publiés
+    // ============================================
+    match /articles/{articleId} {
+      // Lecture publique pour tous les visiteurs
+      allow read: if true;
+      // Écriture réservée aux Cloud Functions
+      allow write: if false;
+    }
+    
+    // ============================================
+    // USERS - Profils utilisateurs
+    // ============================================
+    match /users/{userId} {
+      // Lecture/écriture uniquement pour le propriétaire authentifié
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // ============================================
+    // BOOKMARKS - Favoris utilisateurs
+    // ============================================
+    match /users/{userId}/bookmarks/{bookmarkId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // ============================================
+    // NOTIFICATIONS - Historique des notifications
+    // ============================================
+    match /notifications/{notificationId} {
+      // Lecture publique pour stats
+      allow read: if true;
+      // Écriture Cloud Functions uniquement
+      allow write: if false;
+    }
+  }
+}
